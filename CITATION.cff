@@ -5,6 +5,6 @@ type: software
 authors:
   - family-names: "Saputra"
     given-names: "Devis Wawan"
-repository-code: "https://github.com/devissaputra/assessment-design-lab"
+repository-code: "https://github.com/devissaputra/assessment_design_lab"
 license: MIT
 version: 0.1.0
