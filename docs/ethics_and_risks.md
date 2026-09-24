@@ -2,32 +2,50 @@
 
 ## Intended use
 
-Assessment Design Lab is meant for research, prototyping, and educational design work. It should help people inspect a learning-related signal or decision, not make consequential decisions on their behalf.
+Assessment Design Lab is a decision-support prototype for assessment research and item review. It helps a reviewer inspect response patterns; it does not decide whether an item, learner, instructor, or programme is good or bad.
 
-## Human oversight
+## Main misuse risks
 
-A person should be able to see what evidence produced an output, question it, and override it. If the system cannot explain a recommendation well enough for meaningful review, the recommendation should not be used in a high-stakes setting.
+Simple item statistics can be overinterpreted. A difficult item may be intentionally demanding. A highly discriminating item may still be poorly aligned with the intended learning outcome. A low alpha may reflect multidimensional content that is educationally appropriate.
 
-## Privacy
+Do not use this prototype by itself to:
 
-Collect only the data the study actually needs. Remove direct identifiers, document retention periods, restrict access to raw traces, and avoid storing free text, audio, video, or other sensitive material unless it is essential to the research question.
+- remove or retain high-stakes test items
+- grade or penalize learners
+- evaluate instructor performance
+- rank departments or programmes
+- make admissions, hiring, or disciplinary decisions
+- claim an assessment is valid, fair, or unbiased
+
+## Privacy and assessment security
+
+Response matrices can contain sensitive educational records, and item content may be secure.
+
+Use de-identified data where possible, restrict access to raw responses, separate identifiers from response data, and do not publish unreleased examination items, confidential answer keys, or secure test forms.
 
 ## Fairness
 
-Overall accuracy can hide uneven errors. When it is lawful and ethically appropriate, inspect false alarms, missed support, calibration, and recommendation quality across relevant groups and contexts. Do not treat a single fairness metric as proof that a system is fair.
+Overall item statistics can hide subgroup differences. When lawful, ethically justified, and supported by adequate sample sizes, examine whether items behave differently across relevant groups.
 
-## Educational risk
+The current prototype does **not** implement differential item functioning and must not be presented as a fairness audit.
 
-A technically correct output can still lead to a poor learning experience. Watch for labels that become self-fulfilling, excessive nudging, over-support that removes productive struggle, or analytics that reward surveillance rather than learning.
+## Statistical uncertainty
 
-## Uses excluded from this prototype
+Small samples can make difficulty, discrimination, and alpha unstable. Report sample sizes and uncertainty in empirical work. Avoid fixed universal thresholds presented without context.
 
-- autonomous grading, admissions, or disciplinary decisions
-- employment decisions
-- psychological or medical diagnosis
-- covert monitoring or surveillance
-- any deployment where affected people cannot understand or challenge the output
+## Human oversight
 
-## Before a real-user study or deployment
+A qualified reviewer should inspect flagged items in context, including:
 
-Document consent or another lawful basis, data governance, access controls, subgroup evaluation, calibration where probabilities are used, human escalation paths, and clear rollback criteria.
+- content coverage
+- learning outcome alignment
+- wording and ambiguity
+- scoring rules
+- distractor quality
+- accessibility
+- administration conditions
+- potential subgroup effects
+
+## Before real deployment
+
+Document data governance, assessment purpose, security controls, reviewer roles, how flags are interpreted, escalation paths, and what evidence is required before an item is revised or removed.
