@@ -5,10 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "assessment-design-lab"
 version = "0.1.0"
-description = "Transparent assessment analytics for item difficulty, discrimination, reliability, and evidence based item review."
+description = "Transparent classical assessment diagnostics for item difficulty, rest-score discrimination, reliability, and review signals."
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "Devis Wawan Saputra"}]
+readme = "README.md"
+keywords = [
+  "ai-in-education",
+  "aied",
+  "assessment-design",
+  "psychometrics",
+  "classical-test-theory",
+  "item-analysis",
+  "instructional-design",
+]
+
+[project.urls]
+Repository = "https://github.com/devissaputra/assessment_design_lab"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
