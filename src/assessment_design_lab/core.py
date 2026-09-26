@@ -1,3 +1,7 @@
+# Calculation reading guide: ../CALCULATIONS.md (repository root).
+# Alpha = k/(k-1) × (1 - sum(item variances)/variance(total score)).
+# Difficulty is proportion correct, so larger values mean easier items. Discrimination uses rest scores to avoid part-whole inflation. Alpha is not dimensionality or validity; zero total variance makes it undefined.
+
 import math
 from collections.abc import Sequence
 from numbers import Real

@@ -1,0 +1,8 @@
+{
+  "kind": "illustrative_calculation",
+  "note": "Tiny synthetic response examples; not a psychometric validation.",
+  "outputs": {
+    "proportion correct": 0.5,
+    "Cronbach alpha": 0.75
+  }
+}

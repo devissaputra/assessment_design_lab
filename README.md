@@ -1,14 +1,29 @@
 # Assessment Design Lab
 
+This assessment-analysis toolkit computes item difficulty, tie-safe extreme-group discrimination, and internal-consistency diagnostics from synthetic response matrices. Rest scores exclude the focal item when forming comparison groups, and undefined quantities remain explicit when the data cannot support an estimate. The repository explains how to inspect flagged items without treating alpha or a cutoff as proof of assessment validity.
+
+## Start here
+
+- [Calculations, evidence and verification scope](CALCULATIONS.md)
+- [Figure sources and exact numerical paths](docs/figure_spec.json)
+- [Data status](data/README.md)
+
+![Study question, data, design and interpretation](assets/review_overview.svg)
+
+![Defined calculation and source-linked evidence](assets/review_calculations.svg)
+
+**Review scope:** 19 existing unittest checks passed. The bundled demonstration executed successfully in this review.
+
+## Detailed project documentation
+
 > Transparent classical assessment diagnostics for item difficulty, rest-score discrimination, internal consistency, and evidence-based item review.
 
 [![CI](https://github.com/devissaputra/assessment_design_lab/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/assessment_design_lab/actions/workflows/ci.yml)
 
-![Assessment Design Lab workflow](assets/architecture.svg)
 
 **Area:** AI in Education (AIEd) · Assessment Analytics & Instructional Design  
 **Status:** working research prototype  
-**Author:** Devis Wawan Saputra
+**Author:** Devis Saputra
 
 ## What this project is for
 
@@ -38,7 +53,6 @@ For each item, the code:
 
 At assessment level, the code calculates Cronbach alpha separately.
 
-![Assessment Design Lab data and reasoning flow](assets/data_flow.svg)
 
 The baseline deliberately keeps item statistics, reliability evidence, and expert judgment separate.
 
@@ -50,7 +64,6 @@ The item response is also **never used as a tie-breaker**. If score ties make th
 
 ## Synthetic demo
 
-![Synthetic demo snapshot for Assessment Design Lab](assets/demo_snapshot.svg)
 
 The bundled matrix contains nine synthetic respondents and four binary items. It demonstrates the software path only; it is not an empirical psychometric result.
 
@@ -112,7 +125,6 @@ No external Python package is required for the current baseline.
 
 ## Evaluation view
 
-![Assessment Design Lab evaluation checklist](assets/evaluation_dashboard.svg)
 
 The evaluation graphic shows evidence a real validation study should collect. The bars are illustrative only and do not report measured performance.
 

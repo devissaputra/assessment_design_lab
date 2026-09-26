@@ -1,0 +1,30 @@
+{
+  "question": "Which assessment items warrant review?",
+  "data": "Synthetic binary response matrices; optional criterion scores.",
+  "method": "Calculate proportion correct, rest-score extreme-group discrimination and Cronbach alpha with degeneracy checks.",
+  "formula": "Alpha = k/(k-1) × (1 - sum(item variances)/variance(total score)).",
+  "interpretation": "Difficulty is proportion correct, so larger values mean easier items. Discrimination uses rest scores to avoid part-whole inflation. Alpha is not dimensionality or validity; zero total variance makes it undefined.",
+  "status": "SYNTHETIC / RULE-BASED PROTOTYPE | no educational validity claim",
+  "source": "results/review_examples.json",
+  "rows": [
+    {
+      "label": "proportion correct",
+      "path": [
+        "outputs",
+        "proportion correct"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "Cronbach alpha",
+      "path": [
+        "outputs",
+        "Cronbach alpha"
+      ],
+      "unit": "unitless"
+    }
+  ],
+  "table_title": "Worked example — illustrative, not a measured research result",
+  "evidence_note": "Illustrative inputs and calculations are in scripts/review_examples.py.",
+  "finding": "This assessment-analysis toolkit computes item difficulty, tie-safe extreme-group discrimination, and internal-consistency diagnostics from synthetic response matrices. Rest scores exclude the focal item when forming comparison groups, and undefined quantities remain explicit when the data cannot support an estimate. The repository explains how to inspect flagged items without treating alpha or a cutoff as proof of assessment validity."
+}
